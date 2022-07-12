@@ -4,8 +4,8 @@ import { Component } from 'react';
 import { PhoneBookForm } from 'components/PhoneBookForm/PhoneBookForm';
 import { Section } from 'components/Section/Section.styled';
 import { Box } from 'components/Box/Box.styled';
-import { FhoneBookTitle } from 'components/Title/Title';
-import { FhonesList } from 'components/PhonesList/PhonesList';
+import { Title } from 'components/Title/Title.styled';
+import { PhonesList } from 'components/PhonesList/PhonesList';
 import { Filter } from 'components/Filter/Filter';
 
 export class App extends Component {
@@ -30,7 +30,7 @@ export class App extends Component {
     }
   }
   componentDidUpdate(prevState) {
-    if (this.state.contacts !== prevState) {
+    if (this.state.contacts !== prevState.contacts) {
       localStorage.setItem('contacts', JSON.stringify(this.state.contacts));
     }
   }
@@ -77,14 +77,14 @@ export class App extends Component {
 
     return (
       <Section>
-        <FhoneBookTitle text={'Phonebook'}></FhoneBookTitle>
+        <Title>Phonebook</Title>
         <Box>
           <PhoneBookForm onSubmit={this.formSubmitHandler} />
         </Box>
-        <FhoneBookTitle text={'Contacts'}></FhoneBookTitle>
+        <Title>Contacts</Title>
         <Box>
           <Filter value={filter} onChange={this.changeFilter} />
-          <FhonesList
+          <PhonesList
             options={visibleContacts}
             deleteContact={this.deleteContact}
           />
