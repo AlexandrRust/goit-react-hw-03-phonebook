@@ -1,7 +1,7 @@
 import { List } from './PhonesList.styled';
 import { PropTypes } from 'prop-types';
 import { ItemLi } from './Item/ItemLi.styled';
-import { SecondaryButton } from 'components/buttons/SecondaryButton.styled';
+import { SecondButton } from 'components/buttons/SecondButton.styled';
 
 export const PhonesList = ({ options, deleteContact }) => {
   return (
@@ -9,13 +9,13 @@ export const PhonesList = ({ options, deleteContact }) => {
       {options.map(({ name, id, number }) => (
         <ItemLi key={id}>
           {name}: {number}{' '}
-          <SecondaryButton
+          <SecondButton
             type="button"
             name={name}
             onClick={() => deleteContact(id)}
           >
             delete
-          </SecondaryButton>
+          </SecondButton>
         </ItemLi>
       ))}
     </List>
