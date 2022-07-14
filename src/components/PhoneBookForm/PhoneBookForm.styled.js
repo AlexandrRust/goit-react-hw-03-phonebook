@@ -1,8 +1,8 @@
-import styled from 'styled-components';
+// import styled from 'styled-components';
 
-export const Form = styled.form`
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  border: 1px, solid, black;
-`;
+// export const PhoneForm = styled(Form)`
+//   display: flex;
+//   flex-direction: column;
+//   gap: 20px;
+//   border: 1px, solid, black;
+// `;

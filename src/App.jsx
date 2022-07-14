@@ -42,13 +42,17 @@ export class App extends Component {
       number,
     };
 
-    this.state.contacts.find(
-      elem => elem.name.toLowerCase() === name.toLowerCase()
-    )
-      ? alert(`${name} is already in contacts.`)
-      : this.setState(({ contacts }) => ({
-          contacts: [...contacts, contact],
-        }));
+    if (
+      this.state.contacts.find(
+        elem => elem.name.toLowerCase() === name.toLowerCase()
+      )
+    ) {
+      alert(`${name} is already in contacts.`);
+    }
+
+    this.setState(({ contacts }) => ({
+      contacts: [...contacts, contact],
+    }));
   };
 
   deleteContact = id => {

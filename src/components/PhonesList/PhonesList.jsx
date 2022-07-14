@@ -1,7 +1,7 @@
 import { List } from './PhonesList.styled';
 import { PropTypes } from 'prop-types';
 import { Item } from './Item/Item.styled';
-import { SecondaryButton } from 'components/Buttons/SecondaryButton.styled';
+import { SecondaryButton } from 'components/buttons/SecondaryButton.styled';
 
 export const PhonesList = ({ options, deleteContact }) => {
   return (
