@@ -1,7 +1,7 @@
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import styled from 'styled-components';
 import { Label } from 'components/Label/Label.styled';
-import { PrimaryButton } from 'components/buttons/PrimaryButon.styled';
+import { FirstButton } from 'components/buttons/FirstButton.styled';
 import * as yup from 'yup';
 
 const schema = yup.object().shape({
@@ -65,7 +65,7 @@ export const PhoneBookForm = ({ onSubmit }) => {
           />
           <ErrorMessage name="number" />
         </Label>
-        <PrimaryButton type="submit">Add Contact</PrimaryButton>
+        <FirstButton type="submit">Add Contact</FirstButton>
       </PhoneForm>
     </Formik>
   );

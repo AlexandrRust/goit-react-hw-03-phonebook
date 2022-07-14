@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const PrimaryButton = styled.button`
+export const FirstButton = styled.button`
   width: 100px;
   padding: 3px;
   border-color: gray;
